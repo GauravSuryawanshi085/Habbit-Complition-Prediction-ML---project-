@@ -97,16 +97,15 @@ streamlit run app.py
 
 ---
 
-## 📸 Screenshots
 
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="Habit Tracker Project/Screen_Shots/home.png" width="700"/>
+  <img src="Screen_Shots/home.png" width="700"/>
 </p>
 
 <p align="center">
-  <img src="Habit Tracker Project/Screen_Shots/prediction.png" width="700"/>
+  <img src="Screen_Shots/prediction.png" width="700"/>
 </p>
 
 ---
