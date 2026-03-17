@@ -101,11 +101,11 @@ streamlit run app.py
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="Screen_Shots/home.png" width="700"/>
+  <img src="home.png" width="700"/>
 </p>
 
 <p align="center">
-  <img src="Screen_Shots/prediction.png" width="700"/>
+  <img src="prediction.png" width="700"/>
 </p>
 
 ---
