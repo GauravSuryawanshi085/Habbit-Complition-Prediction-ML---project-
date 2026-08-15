@@ -7,7 +7,7 @@ import datetime
 model = pickle.load(open("model.pkl","rb"))
 
 # load dataset
-df = pd.read_csv(r"C:\Users\gaura\OneDrive\Desktop\Habit Tracker Project\habit_tracker_dataset.csv")
+df = pd.read_csv("habit_tracker_dataset.csv")
 
 # drop unused columns
 df = df.drop(columns=[
@@ -32,15 +32,18 @@ for col in df.columns:
     if col == "Habit_Completed_Today":
         continue
 
-    if df[col].dtype == "object":
-        input_data[col] = st.sidebar.selectbox(col, df[col].unique())
+    if not pd.api.types.is_numeric_dtype(df[col]):
+        input_data[col] = st.sidebar.selectbox(
+            col,
+            df[col].dropna().unique()
+        )
 
     else:
         input_data[col] = st.sidebar.number_input(
             col,
-            float(df[col].min()),
-            float(df[col].max()),
-            float(df[col].mean())
+            min_value=float(df[col].min()),
+            max_value=float(df[col].max()),
+            value=float(df[col].mean())
         )
 
 # add Day_Number feature (model expects it)
